@@ -1,0 +1,50 @@
+.banner {
+  position: relative;
+  height: 80vh;
+  padding-bottom: 12rem;
+}
+
+.banner .logo {
+  margin-top: 8px;
+}
+
+.banner .menu__content {
+  display: flex;
+}
+
+.banner .menu__content__item {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.banner .menu__content__item button {
+  font-size: 1.125rem;
+  padding: 3px 8px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: #fff;
+}
+
+.banner .menu__content__item button:hover {
+  color: #ccc;
+}
+
+.banner h2 {
+  position: absolute;
+  bottom: 6rem;
+  font-weight: bold;
+  font-size: 4rem;
+  color: #fff;
+}
+
+.blackout {
+  height: 80vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../../../img/banner.jpeg') center center no-repeat;
+  background-size: cover;
+  filter: brightness(0.6);
+}

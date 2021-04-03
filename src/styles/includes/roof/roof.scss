@@ -1,0 +1,103 @@
+.roof__info {
+  margin-top: 12px;
+}
+
+.table_header {
+  background-color: $success;
+}
+
+.material-yellow{
+  background: #faefb8;
+  padding-top: 20px;
+}
+
+.material_item {
+  position: relative;
+  padding: 1rem;
+  border-width: .2rem 0 0;
+}
+
+.carousel-control-prev-icon {
+  background: url('/img/previous.svg') !important;
+}
+
+.carousel-control-next-icon {
+  background: url('/img/next.svg') !important;
+}
+
+.materials-description h4 {
+  color: #f85959;
+}
+
+.advantage__item {
+  padding-left: 20px;
+}
+
+.advantage__item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 20px;
+  background: url('/img/check1.svg') center center no-repeat;
+  background-size: contain;
+}
+
+.carousel-indicators li {
+  border-radius: 5px;
+}
+
+.carousel-indicators li:nth-child(1) {
+  background: #4d2326 !important;
+}
+
+.carousel-indicators li:nth-child(2) {
+  background: #309C25 !important;
+}
+
+.carousel-indicators li:nth-child(3) {
+  background: #164A77 !important;
+}
+
+.carousel-indicators li:last-child {
+  background: #68686B !important;
+}
+
+.price {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  color: #f85959;
+}
+
+.material-green {
+    background: #c4e47c;
+}
+
+.carousel-indicators li.red {
+  background: #802b30 !important;
+}
+
+.carousel-indicators li.green {
+  background: #309C25 !important;
+}
+
+.carousel-indicators li.blue {
+  background: #164A77 !important;
+}
+
+.carousel-indicators li.darkGrey {
+  background: #7e6e6e !important;
+}
+
+.carousel-indicators li.bray {
+  background: #5B4F4B !important;
+}
+
+.advantage .red-line {
+    color: #f85959;
+    font-size: 1.25rem;
+    font-weight: bold;
+}

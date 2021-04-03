@@ -1,0 +1,76 @@
+extends common/layout
+
+block content
+  main.main
+    include includes/index/banner
+    .container
+      .row.justify-content-center.main__header 
+        h2 Наши Услуги
+      .row.justify-content-center 
+        .col-6.service-card 
+          .service-card__image
+          a.service-card__content(href="/roof.html")
+            h4 МОНТАЖ КРОВЛИ
+            div под ключ!
+        .col-6.service-card 
+          .service-card__image
+          a.service-card__content(href="#")
+            h4 ОТДЕЛКА ВАШЕГО ДОМА САЙДИНГОМ
+            div под ключ!
+        .w-100
+        .col-6.service-card 
+          .service-card__image
+          a.service-card__content(href="#")
+            h4 ЗАБОРЫ
+            div под ключ!
+        .col-6.service-card 
+          .service-card__image
+          a.service-card__content(href="#")
+            h4 МОНТАЖ ДОМА, ДАЧИ, БАНИ ИЗ БРУСА
+            div под ключ!
+    .container
+      .row.justify-content-center.main__header.about 
+        .col-12.text-center
+          h2 О нас
+          span.about_red_stoke Красивый, прочный и ухоженный дом - 
+          p мечта и гордость  каждого настоящего хозяина! Для того, чтобы Ваш дом имел не только современный и презентабельный  внешний дизайн, но и был надежным и долговечным  необходимо технологически грамотно  выполнить монтажные работы и подобрать качественные материалы. Каждый кто когда либо был вынужден переделывать  некачественно выполненный монтаж, понимает насколько это энерго и материально затратно.
+          span.about_red_stoke Специалисты "СтройДжой"
+          p всегда рады профессионально и качественно, а главное по разумным и доступным ценам  выполнить  для Вас  кровельные работы,  работы по облицовке дома сайдингом, смонтировать забор, а также произвести монтаж дома, дачи или бани из профилированного бруса.
+      .row.justify-content-center.about
+        .col-9
+          h4.text-center Наши принципы и кредо:
+      .row.justify-content-center
+        .col-6
+          ul.principles
+            li.principles_item
+              img(src="img/check.png" alt="logo" width="32" height="32") 
+              span Только опытные и профессиональные монтажники
+            li.principles_item 
+              img(src="img/check.png" alt="logo" width="32" height="32") 
+              span Разумная ценовая политика, честность и открытый диалог с заказчиком
+            li.principles_item 
+              img(src="img/check.png" alt="logo" width="32" height="32") 
+              span Ответственность и гарантия на работы и материалы
+            li.principles_item 
+              img(src="img/check.png" alt="logo" width="32" height="32") 
+              span Официальное заключение договора 
+            li.principles_item 
+              img(src="img/check.png" alt="logo" width="32" height="32") 
+              span Строго фиксированная стоимость работ
+            li.principles_item 
+              img(src="img/check.png" alt="logo" width="32" height="32") 
+              span Соблюдение сроков выполнения работ
+            li.principles_item 
+              img(src="img/check.png" alt="logo" width="32" height="32") 
+              span Бережное отношение к строительному материалу и чистота на объекте
+      .row.justify-content-center
+        .col-12
+          .text-center
+            span.about_red_stoke Наша компания 
+          p.text-center предоставляет  на выполненные работы  гарантию 3 года и гарантию на материалы, указанную в паспорте завода-изготовителя продукции. На материал, доставленный Вам на объект мы передаем  все необходимые документы, в частности копию сертификата качества и паспорта товара.  Именно поэтому ООО "СтройДжой" работает  только с производителями строительных товаров, имеющими полный и необходимый комплект документов и несущих  полную ответственность за свою продукцию.
+      include common/our_work
+      .row.justify-content-center   
+        .col-12
+          p.text-center Обращаем Ваше внимание, что предварительную смету на работы ВЫ можете  заказать  при предоставлении копии проекта  либо при подробном описании  с предоставлением  всех размеров. Точная стоимость  работ, в том числе под ключ  составляется  только  после замера  и выезда нашего специалиста на объект.
+      include common/credit
+  

@@ -1,0 +1,19 @@
+doctype html
+html(lang="ru")
+    block head
+        head
+            meta(charset="utf-8")
+            title stroyjoy
+            meta(content="width=device-width, initial-scale=1" name="viewport")
+            meta(content="ie=edge" http-equiv="x-ua-compatible")
+            link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+            link(rel="stylesheet" href="css/style.min.css")
+    body
+        block header
+            include header
+        block content
+        block footer
+            include footer
+        block scripts
+            script(src='js/main.min.js')
+            //- script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")

@@ -1,0 +1,46 @@
+@import "../../local_modules/normalize.css/normalize";
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Regular Regular';
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.accent {
+  color: $accent;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.bg-success {
+  background-color: $success;
+}
+
+.bg-accent {
+  background-color: $accent;
+}

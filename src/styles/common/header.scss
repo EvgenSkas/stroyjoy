@@ -1,0 +1,37 @@
+@import "../mixins/media";
+
+.header {
+  height: 40px;
+  // width: 220px;
+  background-color: lighten($primary, 40%);
+  // background: #ccc url('../../img/forest.jpg') 0 0  no-repeat;
+
+  // @include media-tablet {
+  //     width: 500px;
+  // }
+}
+
+.contact {
+  padding-left: 12px;
+}
+
+.header .contact::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url('../../img/phone.svg') 0 0 no-repeat;
+}
+
+.header .contact__item {
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
+.social__item {
+  margin-top: 6px;
+  margin-left: 4px;
+}

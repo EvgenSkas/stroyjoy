@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Regular';
+    src: url('../../fonts/regular/Regular-Bold.eot');
+    src: local('Regular Bold'), local('Regular-Bold'),
+        url('../../fonts/regular/Regular-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/regular/Regular-Bold.woff2') format('woff2'),
+        url('../../fonts/regular/Regular-Bold.woff') format('woff'),
+        url('../../fonts/regular/Regular-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../../fonts/regular/Regular-Regular.eot');
+    src: local('Regular Regular'), local('Regular-Regular'),
+        url('../../fonts/regular/Regular-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/regular/Regular-Regular.woff2') format('woff2'),
+        url('../../fonts/regular/Regular-Regular.woff') format('woff'),
+        url('../../fonts/regular/Regular-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../../fonts/regular/Regular-MediumItalic.eot');
+    src: local('Regular Medium Italic'), local('Regular-MediumItalic'),
+        url('../../fonts/regular/Regular-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/regular/Regular-MediumItalic.woff2') format('woff2'),
+        url('../../fonts/regular/Regular-MediumItalic.woff') format('woff'),
+        url('../../fonts/regular/Regular-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../../fonts/regular/Regular-ExtraBoldItalic.eot');
+    src: local('Regular ExtraBold Italic'), local('Regular-ExtraBoldItalic'),
+        url('../../fonts/regular/Regular-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/regular/Regular-ExtraBoldItalic.woff2') format('woff2'),
+        url('../../fonts/regular/Regular-ExtraBoldItalic.woff') format('woff'),
+        url('../../fonts/regular/Regular-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Regular Regular';
+    src: url('../../fonts/regular/Regular-RegularItalic.eot');
+    src: local('Regular Regular Italic'), local('Regular-RegularItalic'),
+        url('../../fonts/regular/Regular-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/regular/Regular-RegularItalic.woff2') format('woff2'),
+        url('../../fonts/regular/Regular-RegularItalic.woff') format('woff'),
+        url('../../fonts/regular/Regular-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../../fonts/regular/Regular-SemiBoldItalic.eot');
+    src: local('Regular SemiBold Italic'), local('Regular-SemiBoldItalic'),
+        url('../../fonts/regular/Regular-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/regular/Regular-SemiBoldItalic.woff2') format('woff2'),
+        url('../../fonts/regular/Regular-SemiBoldItalic.woff') format('woff'),
+        url('../../fonts/regular/Regular-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../../fonts/regular/Regular-SemiBold.eot');
+    src: local('Regular SemiBold'), local('Regular-SemiBold'),
+        url('../../fonts/regular/Regular-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/regular/Regular-SemiBold.woff2') format('woff2'),
+        url('../../fonts/regular/Regular-SemiBold.woff') format('woff'),
+        url('../../fonts/regular/Regular-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../../fonts/regular/Regular-Black.eot');
+    src: local('Regular Black'), local('Regular-Black'),
+        url('../../fonts/regular/Regular-Black.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/regular/Regular-Black.woff2') format('woff2'),
+        url('../../fonts/regular/Regular-Black.woff') format('woff'),
+        url('../../fonts/regular/Regular-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../../fonts/regular/Regular-BlackItalic.eot');
+    src: local('Regular Black Italic'), local('Regular-BlackItalic'),
+        url('../../fonts/regular/Regular-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/regular/Regular-BlackItalic.woff2') format('woff2'),
+        url('../../fonts/regular/Regular-BlackItalic.woff') format('woff'),
+        url('../../fonts/regular/Regular-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../../fonts/regular/Regular-ExtraBold.eot');
+    src: local('Regular ExtraBold'), local('Regular-ExtraBold'),
+        url('../../fonts/regular/Regular-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/regular/Regular-ExtraBold.woff2') format('woff2'),
+        url('../../fonts/regular/Regular-ExtraBold.woff') format('woff'),
+        url('../../fonts/regular/Regular-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../../fonts/regular/Regular-LightItalic.eot');
+    src: local('Regular Light Italic'), local('Regular-LightItalic'),
+        url('../../fonts/regular/Regular-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/regular/Regular-LightItalic.woff2') format('woff2'),
+        url('../../fonts/regular/Regular-LightItalic.woff') format('woff'),
+        url('../../fonts/regular/Regular-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../../fonts/regular/Regular-BoldItalic.eot');
+    src: local('Regular Bold Italic'), local('Regular-BoldItalic'),
+        url('../../fonts/regular/Regular-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/regular/Regular-BoldItalic.woff2') format('woff2'),
+        url('../../fonts/regular/Regular-BoldItalic.woff') format('woff'),
+        url('../../fonts/regular/Regular-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../../fonts/regular/Regular-Medium.eot');
+    src: local('Regular Medium'), local('Regular-Medium'),
+        url('../../fonts/regular/Regular-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/regular/Regular-Medium.woff2') format('woff2'),
+        url('../../fonts/regular/Regular-Medium.woff') format('woff'),
+        url('../../fonts/regular/Regular-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../../fonts/regular/Regular-Light.eot');
+    src: local('Regular Light'), local('Regular-Light'),
+        url('../../fonts/regular/Regular-Light.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/regular/Regular-Light.woff2') format('woff2'),
+        url('../../fonts/regular/Regular-Light.woff') format('woff'),
+        url('../../fonts/regular/Regular-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+

@@ -1,0 +1,204 @@
+extends common/layout
+
+block content
+    main.main.roof
+        include includes/roof/banner
+        section.roof_info_text
+            .container
+                .row
+                    .roof__info.text-center 
+                        p Если Вам необходимо произвести   монтаж новой кровли с нуля, заменить старую кровлю,  произвести реконструкцию кровли, выполнить  монтаж стропильной системы, сделать гидроизоляцию или утепление кровли, установить мансардное окно, водосточную систему по доступной цене и с официальной гарантией - обращайтесь к нашему опературу  по телефону 
+                            a(href="/roof.html") 8 044 544 04 38 (Viber) или 8 029 568 52 32. 
+                        p Оператор назначит в удобное для Вас время выезд специалиста  для произведения бесплатного  замера и  бесплатного расчета монтажа и кровельных материалов.  Наши сотрудники помогут определить Вам наиболее приемлемый вариант решения кровли в соотвношении цена -качество.
+        include common/our_work
+        section.roof_info_text
+            .container
+                .row 
+                    p.text-center Обращаем Ваше внимание, что предварительную смету на работы ВЫ можете  заказать  при предоставлении копии проекта  либо при подробном описании  с предоставлением  всех размеров. Точная стоимость  работ, в том числе под ключ  составляется  только  после замера  и выезда нашего специалиста на объект.
+        section.cost 
+            .container
+                .row
+                    table.table.table-bordered
+                        tbody.text-center
+                            tr 
+                                th.table_header(colspan="3") СТОИМОСТЬ КРОВЕЛЬНЫХ РАБОТ
+                            tr
+                                td.bg-success Односкатная
+                                td.bg-accent от 22 бел. руб.
+                                td.bg-accent В стоимость входит монтаж мауэрлата, установка стропильной системы, монтаж гидроизоляции, укладка металлочерепицы
+                            tr
+                                td.bg-success Двускатная
+                                td.bg-accent от 28 бел. руб.
+                                td.bg-accent В стоимость входит монтаж мауэрлата, установка стропильной системы, монтаж гидроизоляции, укладка металлочерепицы
+                            tr
+                                td.bg-success ВАЛЬМОВАЯ ШАТРОВАЯ
+                                td.bg-accent от 33 бел. руб.
+                                td.bg-accent В стоимость входит монтаж мауэрлата, установка стропильной системы, монтаж гидроизоляции, укладка металлочерепицы
+                .row.justify-content-center 
+                    p *Приведенные цены носят ознакомительный характер и не являются публичной офертой
+        section.material-yellow
+            .container
+                .row
+                    h4.text-center МАТЕРИАЛЫ С КОТОРЫМИ МЫ РАБОТАЕМ: МЕТАЛЛОЧЕРЕПИЦА, ПРОФНАСТИЛ, ШИФЕР, ОНДУЛИН
+                .row
+                    .col-6
+                        #carouselExampleIndicators.carousel.slide(data-ride="carousel")
+                            ol.carousel-indicators
+                                li.active(data-target="#carouselExampleIndicators" data-slide-to="0")
+                                li(data-target="#carouselExampleIndicators" data-slide-to="1")
+                                li(data-target="#carouselExampleIndicators" data-slide-to="2")
+                                li(data-target="#carouselExampleIndicators" data-slide-to="3")
+                            .carousel-inner
+                                .carousel-item.active
+                                    img.d-block(src="/img/red-roof.jpg" alt="First slide")
+                                .carousel-item
+                                    img.d-block(src="/img/green-roof.jpg" alt="Second slide")
+                                .carousel-item
+                                    img.d-block(src="/img/blue-roof.jpg" alt="Third slide")
+                                .carousel-item
+                                    img.d-block(src="/img/grey-roof.jpg" alt="Fourth slide")
+                            a.carousel-control-prev(href="#carouselExampleIndicators" role="button" data-slide="prev")
+                                span.carousel-control-prev-icon(aria-hidden="true")
+                                span.sr-only Previous
+                            a.carousel-control-next(href="#carouselExampleIndicators" role="button" data-slide="next")
+                                span.carousel-control-next-icon(aria-hidden="true")
+                                span.sr-only Next
+                        .price стоимость от 21,16 бел. рублей
+                    .col-6 
+                        .materials-description
+                            h4.text-center МЕТАЛЛОЧЕРЕПИЦА "МОНТЕРРЕЙ" И "СУПЕРМОНТЕРРЕЙ" 
+                            p.text-center Данная металлочерепица подходит  для любого типа кровли со скатом свыше 14%. Изготавливается из высококачественной оцинкованной стали с полимерными покрытиями  полиэстер, "Стальной шёлк" и "Стальной бархат". Материал обладает высоким уровнем гибкости.  Габаритная ширина лсиат 1190мм (полезная ширина 1100мм), шаг волны 350мм, высота ступенек 14мм. Длина листов  составляет от 0,5 до 8 м. Широкий выбор цветовой гаммы по палитрам RAL.
+                            .h6 К основным достоинстам данной металочерепицы относят: 
+                            ul.advantage
+                                li.advantage__item относительно небольшой вес;
+                                li.advantage__item устойчивость к воздействию внешней среды и перепадам температур;
+                                li.advantage__item удобство монтажа;
+                                li.advantage__item длительный срок службы;
+                                li.advantage__item экологическую и пожарную безопасность.
+        section.material-green 
+            .container
+                .row
+                    .col-6
+                        #carouselExampleIndicatorsVil.carousel.slide(data-ride="carousel")
+                            ol.carousel-indicators
+                                li.red.active(data-target="#carouselExampleIndicatorsVil" data-slide-to="0")
+                                li.green(data-target="#carouselExampleIndicatorsVil" data-slide-to="1")
+                                li.blue(data-target="#carouselExampleIndicatorsVil" data-slide-to="2")
+                                li.darkGrey(data-target="#carouselExampleIndicatorsVil" data-slide-to="3")
+                            .carousel-inner
+                                .carousel-item.active
+                                    img.d-block(src="/img/vil-red-roof.png" alt="First slide")
+                                .carousel-item
+                                    img.d-block(src="/img/vil-green-roof.png" alt="Second slide")
+                                .carousel-item
+                                    img.d-block(src="/img/vil-blue-roof.png" alt="Third slide")
+                                .carousel-item
+                                    img.d-block(src="/img/vil-dark-grey-roof.png" alt="Fourth slide")
+                            a.carousel-control-prev(href="#carouselExampleIndicatorsVil" role="button" data-slide="prev")
+                                span.carousel-control-prev-icon(aria-hidden="true")
+                                span.sr-only Previous
+                            a.carousel-control-next(href="#carouselExampleIndicatorsVil" role="button" data-slide="next")
+                                span.carousel-control-next-icon(aria-hidden="true")
+                                span.sr-only Next
+                        .price стоимость от 21,84 бел. рублей
+                    .col-6 
+                        .materials-description
+                            h4.text-center МЕТАЛЛОЧЕРЕПИЦА "ВИЛЕЙСКАЯ ВОЛНА" 
+                            p.text-center Сочетает в себе эстетику с идеальными потребительскими параметрами.  
+                            .h6 Особенности:   
+                            ul.advantage
+                                li.advantage__item увеличение области нахлеста, достигающего 7мм по высоте;   
+                                li.advantage__item наличие конденсационной канавки на гребне, что способствует быстрому стоку воды и конденсата;
+                                li.advantage__item накрывающая часть металлочерепицы имеет меньший радиус закругления, чем накрываемая часть, что создает эффект подпружинивая. Это обеспечивает  более плотное прилегание соединяющих частей. 
+                            .h6 Размеры: 
+                            ul.advantage
+                                li.advantage__item Высокий поперечный шаг волны - 24 и 30 мм придает кровле  изысканный вид керамической плитки,а также обеспечивает   более всокие и качественные прочностные характеристики; 
+                                li.advantage__item Шаг волны  составляе 350 и 400мм. 
+        section.material-yellow
+            .container
+                .row
+                    .col-6
+                        #carouselExampleIndicatorsNar.carousel.slide(data-ride="carousel")
+                            ol.carousel-indicators
+                                li.red.active(data-target="#carouselExampleIndicatorsNar" data-slide-to="0")
+                                li.blue(data-target="#carouselExampleIndicatorsNar" data-slide-to="1")
+                                li.bray(data-target="#carouselExampleIndicatorsNar" data-slide-to="2")
+                            .carousel-inner
+                                .carousel-item.active
+                                    img.d-block(src="/img/nar-red-roof.jpg" alt="First slide")
+                                .carousel-item
+                                    img.d-block(src="/img/nar-blue-roof.jpg" alt="Second slide")
+                                .carousel-item
+                                    img.d-block(src="/img/nar-bray-roof.jpg" alt="Third slide")
+                            a.carousel-control-prev(href="#carouselExampleIndicatorsNar" role="button" data-slide="prev")
+                                span.carousel-control-prev-icon(aria-hidden="true")
+                                span.sr-only Previous
+                            a.carousel-control-next(href="#carouselExampleIndicatorsNar" role="button" data-slide="next")
+                                span.carousel-control-next-icon(aria-hidden="true")
+                                span.sr-only Next
+                        .price стоимость от 22,45 бел. рублей
+                    .col-6 
+                        .materials-description
+                            h4.text-center МЕТАЛЛОЧЕРЕПИЦА "НАРОЧАНКА"  
+                            p.text-center Отличительная особенность мателлочерепицы "Нарочанка"  - округлая форма  волны. Такой профиль равномерно распределяет нагрузку снега на кровлю, а благодаря своему дизайну, схожему с натуральной черепицей он придает крыше свой стиль  и подчеркивает индивидуальность. 
+                            .h6 Особенности:   
+                            ul.advantage
+                                li.advantage__item оригинальный внешний вид; 
+                                li.advantage__item долговечность и надежность;  
+                                li.advantage__item высокая сопротивляемость к повреждениям;
+                                li.advantage__item устойчивость к выгоранию под солнцем; 
+                                li.advantage__item  накрывающая часть металлочерепицы имеет меньший радиус закругления, чем накрываемая часть, что создает эффект подпружинивая. Это обеспечивает  более плотное прилегание соединяющих частей; 
+                                li.advantage__item  высокий уровень пожаробезопасности.
+                            .h6 Размеры: 
+                            ul.advantage
+                                li.advantage__item Шаг волны 350 и 400мм, высота ступенек 19 и 25мм.  
+        section.material-green
+            .container 
+                .row 
+                    .col-12
+                        h4 Покрытия металлочерепицы: 
+                        ul.advantage
+                            li.advantage__item 
+                                span.red-line Полиэстер. 
+                                span Наиболее распространенное и доступное по цене. На выбор - глянцевый и матовый.
+                            li.advantage__item 
+                                span.red-line Стальной бархат. 
+                                span Текстурированное покрытие, имеющее семь слоев защиты и пивлекательный внешний вид. Толщина металлопроката - 0,5мм, масса цинка - 180/275/м2, цветное полиэфирное покрытие - 30мкм.
+                            li.advantage__item 
+                                span.red-line Стальной шёлк. 
+                                span Кровельное покрытие с широкой палитрой цветов, высокой степенью защиты от коррозии, ультрафиолета и влажности. Толщика металлопроката - 0,5мм, масса цинка - 180/275/м2, цветное полиэфирное покрытие -25/ 30мкм.
+                            li.advantage__item 
+                                span.red-line PRINTECH. 
+                                span Покрытие с разнообразными видами рисунка, нанесенных на стальной лист. Преимущества заключаются в разнообразии расцветоки рисунков, имитирующих дерево, натуральный камень и другие материалы. Также является крайне устойчивым материалом к воздействию окружающей среды.
+        section.material-yellow
+            .container
+                .row
+                    .col-6
+                        #carouselExampleIndicatorsProf.carousel.slide(data-ride="carousel")
+                            ol.carousel-indicators
+                                li.red.active(data-target="#carouselExampleIndicatorsProf" data-slide-to="0")
+                                li.green(data-target="#carouselExampleIndicatorsProf" data-slide-to="1")
+                                li.blue(data-target="#carouselExampleIndicatorsProf" data-slide-to="2")
+                                li.bray(data-target="#carouselExampleIndicatorsProf" data-slide-to="3")
+                            .carousel-inner
+                                .carousel-item.active
+                                    img.d-block(src="/img/prof-red-roof.png" alt="First slide")
+                                .carousel-item
+                                    img.d-block(src="/img/prof-green-roof.png" alt="Second slide")
+                                .carousel-item
+                                    img.d-block(src="/img/prof-blue-roof.png" alt="Second slide")
+                                .carousel-item
+                                    img.d-block(src="/img/prof-bray-roof.png" alt="Third slide")
+                            a.carousel-control-prev(href="#carouselExampleIndicatorsProf" role="button" data-slide="prev")
+                                span.carousel-control-prev-icon(aria-hidden="true")
+                                span.sr-only Previous
+                            a.carousel-control-next(href="#carouselExampleIndicatorsProf" role="button" data-slide="next")
+                                span.carousel-control-next-icon(aria-hidden="true")
+                                span.sr-only Next
+                        .price стоимость от 13,9 бел. рублей
+                    .col-6 
+                        .materials-description
+                            h4.text-center ПРОФНАСТИЛ 
+                            p.text-center Профнастил или профилированные листы – это современный облицовочный материал, который производится из оцинкованной стали без покрытия или с различными полимерными покрытиями, придающими материалу цвет и более высокую степень коррозионостойкости. 
+                            p.text-center Внешне профнастил представляет собой металлические гофрированные листы, трапециевидной или волнистой формы. Профнастил  следующих марок НС-35 (П-ТР-п-35) высота волны 35 мм и ПС -21 и МП -20 в качествекровельного материала  для производственных и  жилых построек, а аткже ограждений; профнастил Н-60 (П-ТРп-60) выота волны 60 мм - чаще всего как кровельный материал   для произволственных  помещений либо крупногабаритных ограждений. 
+        include common/credit

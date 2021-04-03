@@ -1,0 +1,19 @@
+.credit h4 {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.banks {
+  margin: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banks img {
+  height: 40px;
+}
+
+.banks img:first-child {
+  height: 60px;
+}
