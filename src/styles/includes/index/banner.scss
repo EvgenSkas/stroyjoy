@@ -44,7 +44,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: url('../../../img/banner.jpeg') center center no-repeat;
   background-size: cover;
   filter: brightness(0.6);
+}
+
+.main-banner {
+  background: url('/img/banner.jpeg') center center no-repeat;
 }
