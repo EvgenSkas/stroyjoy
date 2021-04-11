@@ -1,0 +1,23 @@
+.modal.fade#exampleModalCenter(tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+        .modal-content
+            .modal-header
+                h5.modal-title#exampleModalLongTitle Укажите свои данные. Мы Вам перезвоним!
+                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                span(aria-hidden="true") &times
+            .modal-body 
+                <form  id="form" class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="validationCustom01">Ваше имя:</label>
+                        <input name="name" type="text" class="form-control" id="validationCustom01" placeholder="First name">
+                    </div>
+                    <div class="form-group">
+                        <label for="validationCustom02">Ваш Email:</label>
+                        <input name="email" type="email" class="form-control" id="validationCustom02" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="validationCustom02">Ваш телефон:</label>
+                        <input name="phone" type="number" class="form-control" id="validationCustom02" aria-describedby="emailHelp" required placeholder="375XX XXX XX XX">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Отправить</button>
+                </form>

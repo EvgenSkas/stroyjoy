@@ -40,7 +40,6 @@
 }
 
 .banner_siding h2 {
-  margin-left: 15px;
   font-weight: bold;
   font-size: 4rem;
   color: #fff;
@@ -71,7 +70,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: url('/img/siding-banner.jpg') center center no-repeat;
+  background: url('../img/siding-banner.jpg') center center no-repeat;
   background-size: cover;
   filter: brightness(0.6);
 }

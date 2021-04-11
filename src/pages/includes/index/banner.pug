@@ -3,15 +3,16 @@
     .container
         .row    
             .col-3.logo 
-                a(href="/")
+                a(href="./")
                     img(src="img/logo.svg" alt="logo" width="128" height="128") 
             .col-9.menu.d-flex.justify-content-end
-                ul.menu__content
+                ul#menu.menu__content
                     li.menu__content__item 
-                        button О нас
+                        button#menu_about О нас
                     li.menu__content__item 
-                        button Услуги
+                        button#menu_services Услуги
                     li.menu__content__item 
-                        button Заказать обратный звонок
+                        button(type="button" data-toggle="modal" data-target="#exampleModalCenter") Заказать обратный звонок
         .row 
             h2 На радость Вам и Вашему дому!
+include ../../common/feedback_modal

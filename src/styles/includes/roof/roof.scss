@@ -8,7 +8,12 @@
 
 .material-yellow{
   background: #faefb8;
-  padding-top: 20px;
+  padding: 20px 0;
+}
+
+.material-green {
+    background: #c4e47c;
+    padding: 20px 0;
 }
 
 .material_item {
@@ -18,11 +23,11 @@
 }
 
 .carousel-control-prev-icon {
-  background: url('/img/previous.svg') !important;
+  background: url('../img/previous.svg') !important;
 }
 
 .carousel-control-next-icon {
-  background: url('/img/next.svg') !important;
+  background: url('../img/next.svg') !important;
 }
 
 .materials-description h4 {
@@ -40,8 +45,12 @@
   left: 0;
   width: 25px;
   height: 20px;
-  background: url('/img/check1.svg') center center no-repeat;
+  background: url('../img/check1.svg') center center no-repeat;
   background-size: contain;
+}
+
+.slide {
+  max-height: 400px;
 }
 
 .carousel-indicators li {
@@ -66,14 +75,10 @@
 
 .price {
   position: absolute;
-  top: 20px;
+  top: 10px;
   width: 100%;
   text-align: center;
   color: #f85959;
-}
-
-.material-green {
-    background: #c4e47c;
 }
 
 .carousel-indicators li.red {

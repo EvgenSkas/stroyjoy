@@ -4,18 +4,25 @@
 }
 
 .service-card {
-  padding: 20px;
-  width: 560px;
+  max-width: 560px;
   height: 400px;
 }
 
 .service-card__image {
   position: absolute;
-  width: 95%;
+  width: 92%;
   height: 360px;
-  background: url('../../../img/remont_krovli.jpg') center center no-repeat;
-  background-size: cover;
   filter: brightness(0.6);
+}
+
+.service-card__image__roof {
+  background: url('../img/remont_krovli.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.service-card__image__siding {
+  background: url('../img/siding-banner.jpg') center center no-repeat;
+  background-size: cover;
 }
 
 .service-card__content {
@@ -23,7 +30,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 95%;
+  width: 92%;
   height: 100%;
   position: absolute;
   text-align: center;

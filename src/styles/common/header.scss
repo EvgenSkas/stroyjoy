@@ -23,7 +23,7 @@
   left: 0;
   width: 24px;
   height: 24px;
-  background: url('../../img/phone.svg') 0 0 no-repeat;
+  background: url('../img/phone.svg') 0 0 no-repeat;
 }
 
 .header .contact__item {
@@ -34,4 +34,12 @@
 .social__item {
   margin-top: 6px;
   margin-left: 4px;
+}
+
+.social__item a:hover {
+  text-decoration: none;
+}
+
+.fb {
+  border-radius: 3px;
 }

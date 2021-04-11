@@ -5,33 +5,37 @@ block content
     include includes/index/banner
     .container
       .row.justify-content-center.main__header 
-        h2 Наши Услуги
+        h2#services_content Наши Услуги
       .row.justify-content-center 
-        .col-6.service-card 
-          .service-card__image
-          a.service-card__content(href="/roof.html")
-            h4 МОНТАЖ КРОВЛИ
-            div под ключ!
-        .col-6.service-card 
-          .service-card__image
-          a.service-card__content(href="/siding.html")
-            h4 ОТДЕЛКА ВАШЕГО ДОМА САЙДИНГОМ
-            div под ключ!
-        .w-100
-        .col-6.service-card 
-          .service-card__image
-          a.service-card__content(href="#")
-            h4 ЗАБОРЫ
-            div под ключ!
-        .col-6.service-card 
-          .service-card__image
-          a.service-card__content(href="#")
-            h4 МОНТАЖ ДОМА, ДАЧИ, БАНИ ИЗ БРУСА
-            div под ключ!
+        .col-md-6
+          .service-card 
+            .service-card__image.service-card__image__roof
+            a.service-card__content(href="./roof.html")
+              h4 МОНТАЖ КРОВЛИ
+              div под ключ!
+        .col-md-6
+          .service-card 
+            .service-card__image.service-card__image__siding
+            a.service-card__content(href="./siding.html")
+              h4 ОТДЕЛКА ВАШЕГО ДОМА САЙДИНГОМ
+              div под ключ!
+        //- .w-100
+        //- .col-md-6
+        //-   .service-card 
+        //-     .service-card__image
+        //-     a.service-card__content(href="#")
+        //-       h4 ЗАБОРЫ
+        //-       div под ключ!
+        //- .col-md-6
+        //-   .service-card 
+        //-     .service-card__image
+        //-     a.service-card__content(href="#")
+        //-       h4 МОНТАЖ ДОМА, ДАЧИ, БАНИ ИЗ БРУСА
+        //-       div под ключ!
     .container
       .row.justify-content-center.main__header.about 
         .col-12.text-center
-          h2 О нас
+          h2#about_us_content О нас
           span.about_red_stoke Красивый, прочный и ухоженный дом - 
           p мечта и гордость  каждого настоящего хозяина! Для того, чтобы Ваш дом имел не только современный и презентабельный  внешний дизайн, но и был надежным и долговечным  необходимо технологически грамотно  выполнить монтажные работы и подобрать качественные материалы. Каждый кто когда либо был вынужден переделывать  некачественно выполненный монтаж, понимает насколько это энерго и материально затратно.
           span.about_red_stoke Специалисты "СтройДжой"
@@ -40,7 +44,7 @@ block content
         .col-9
           h4.text-center Наши принципы и кредо:
       .row.justify-content-center
-        .col-6
+        .col-md-6
           ul.principles
             li.principles_item
               img(src="img/check.png" alt="logo" width="32" height="32") 
@@ -70,4 +74,6 @@ block content
           p.text-center предоставляет  на выполненные работы  гарантию 3 года и гарантию на материалы, указанную в паспорте завода-изготовителя продукции. На материал, доставленный Вам на объект мы передаем  все необходимые документы, в частности копию сертификата качества и паспорта товара.  Именно поэтому ООО "СтройДжой" работает  только с производителями строительных товаров, имеющими полный и необходимый комплект документов и несущих  полную ответственность за свою продукцию.
       include common/how_to_work
       include common/credit
-  
+      .row.justify-content-center
+        .col-md
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11073.370743355821!2d26.847858974591997!3d54.30590563666679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dc75c2f86f66f3%3A0xb011d94032099535!2sUlitsa%20Kosmonavtov%205%2C%20Maladzie%C4%8Dna!5e0!3m2!1sen!2sby!4v1618048192743!5m2!1sen!2sby" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>

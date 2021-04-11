@@ -2,17 +2,17 @@
     .blackout.siding
     .container
         .row    
-            .col-6.logo 
-                a(href="/")
-                    img(src="img/logo.svg" alt="logo" width="128" height="128") 
+            .col-6.logo
+                a(href="../")
+                    img(src="img/logo.svg" alt="logo" width="128" height="128")
             .col-6.menu.d-flex.justify-content-end
-                .btn-container 
-                    button.btn.btn-success.custom_roof_banner_btn(type="button") Заказать звонок
+                .btn-container
+                    button.btn.btn-success.custom_roof_banner_btn(type="button" data-toggle="modal" data-target="#exampleModalCenter") Заказать звонок
         .banner_siding_content 
             .row
                 h2 ОТДЕЛКА САЙДИНГОМ
             .row
-                .col-12
-                    .sub_header под ключ по РБ!
-                .col-12
-                    .sub_header.banner_siding_credit КРЕДИТОВАНИЕ ДО 60 МЕСЯЦЕВ
+                .sub_header под ключ по РБ!
+            .row
+                .sub_header.banner_siding_credit КРЕДИТОВАНИЕ ДО 60 МЕСЯЦЕВ
+include ../../common/feedback_modal
