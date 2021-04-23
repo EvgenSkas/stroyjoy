@@ -1,0 +1,87 @@
+.modal.fade#calculateModal(tabindex="-1" role="dialog" aria-labelledby="calculateModal" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+        .modal-content
+            .modal-header
+                h5.modal-title#exampleModalLongTitle Ответьте на несколько вопросов.
+                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                span(aria-hidden="true") &times
+            .modal-body 
+                .container
+                    .question
+                        .h5
+                            b Выбирите покрытие:
+                        .row.justify-content-center.w-100
+                            .col-md-6.card.roof-calc-card(data-type="Металлочерипица")
+                                img.card-img-top(src="img/calc_cherep.jpg" alt="Card image cap")
+                                .card-body
+                                    span Металлочерепица
+                            .col-md-6.card.roof-calc-card(data-type="Профнастил")
+                                img.card-img-top(src="img/calc_prof.jpg" alt="Card image cap")
+                                .card-body
+                                    span Профнастил
+                            .col-md-6.card.roof-calc-card(data-type="Шифер")
+                                img.card-img-top(src="img/calc_shif.jpg" alt="Card image cap")
+                                .card-body
+                                    span Шифер
+                            .col-md-6.card.roof-calc-card(data-type="Ондулин")
+                                img.card-img-top(src="img/calc_ondulin.jpg" alt="Card image cap")
+                                .card-body
+                                    span Ондулин
+                    <div id="question2 " class="d-none question">
+                        <div class="h5"><b>У Вас новое строительство или замена кровли?</b></div>
+                        <div id="options"> 
+                            <label class="options">Новое строительство 
+                                <input type="radio" name="radio" data-type="Новое строительство "> 
+                                <span class="checkmark"></span> 
+                            </label> 
+                            <label class="options">Замена кровли
+                                <input type="radio" name="radio" data-tpye="Замена кровли"> 
+                                <span class="checkmark"></span> 
+                            </label> 
+                        </div>
+                    </div>
+                    .d-none.question
+                        .h5
+                            b Какая у Вас крыша?:
+                        .row.justify-content-center.w-100
+                            .col-md-6.card.skat-calc-card(data-type="Двускатная")
+                                img.card-img-top(src="img/two_skat.jpg" alt="Card image cap")
+                                .card-body
+                                    span Двускатная
+                            .col-md-6.card.skat-calc-card(data-type="Трехскатная")
+                                img.card-img-top(src="img/three_skat.jpg" alt="Card image cap")
+                                .card-body
+                                    span Трехскатная
+                            .col-md-6.card.skat-calc-card(data-type="Многоскатная")
+                                img.card-img-top(src="img/many_skat.jpg" alt="Card image cap")
+                                .card-body
+                                    span Многоскатная
+                    .d-none.question
+                        .h5 
+                            b Какая примерно площадь крыши?
+                        input.range(min="10" max="500" value="0" step="1" type="range" name="square") 
+                        #squareValue
+                            span 0 кв.м.
+                    .d-none.question
+                        .h5 
+                            b Укажите место строительства (для расчета стоимости доставки)
+                        input.form-control.city(type="text" name="city" placeholder="Например: Молодечно")
+                    <form  id="form2" class="d-none question needs-validation" novalidate>
+                        <div class="form-group">
+                            <label for="validationCustom04">Ваше имя:</label>
+                            <input name="name" type="text" class="form-control" id="validationCustom04" placeholder="First name">
+                        </div>
+                        <div class="form-group">
+                            <label for="validationCustom05">Ваш Email:</label>
+                            <input name="email" type="email" class="form-control" id="validationCustom05" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="validationCustom06">Ваш телефон:</label>
+                            <input name="phone" type="number" class="form-control" id="validationCustom06" aria-describedby="emailHelp" required placeholder="375XX XXX XX XX">
+                        </div>
+                        <button class="btn btn-primary" type="submit">Отправить</button>
+                    </form>
+                <div class="d-flex align-items-center pt-3">
+                    <div id="prev"> <button class="btn btn-primary">Previous</button> </div>
+                    <div id="next" class="ml-auto mr-sm-5"> <button disabled class="btn btn-disabled ">Next</button> </div>
+                </div>
