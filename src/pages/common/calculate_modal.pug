@@ -2,10 +2,17 @@
     .modal-dialog.modal-dialog-centered(role="document")
         .modal-content
             .modal-header
-                h5.modal-title#exampleModalLongTitle Ответьте на несколько вопросов.
+                h5.modal-title#exampleModalLongTitle Ответьте на несколько вопросов. 
+                    span Шаг 
+                        span#step 1 
+                        span из 6.
+
                 button.close(type="button" data-dismiss="modal" aria-label="Close")
                 span(aria-hidden="true") &times
             .modal-body 
+                <div id="progress" class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
                 .container
                     .question
                         .h5
@@ -67,6 +74,8 @@
                             b Укажите место строительства (для расчета стоимости доставки)
                         input.form-control.city(type="text" name="city" placeholder="Например: Молодечно")
                     <form  id="form2" class="d-none question needs-validation" novalidate>
+                        .h5 
+                            b Заполните, пожалуйста, форму контактов, чтобы мы знали куда отправлять результаты расчета стоимости!
                         <div class="form-group">
                             <label for="validationCustom04">Ваше имя:</label>
                             <input name="name" type="text" class="form-control" id="validationCustom04" placeholder="First name">
@@ -81,7 +90,7 @@
                         </div>
                         <button class="btn btn-primary" type="submit">Отправить</button>
                     </form>
-                <div class="d-flex align-items-center pt-3">
-                    <div id="prev"> <button class="btn btn-primary">Previous</button> </div>
-                    <div id="next" class="ml-auto mr-sm-5"> <button disabled class="btn btn-disabled ">Next</button> </div>
+                <div id="price-btns" class="d-flex align-items-center pt-3">
+                    <div id="prev"> <button disabled class="btn btn-disabled">Previous</button> </div>
+                    <div id="next" class="ml-auto mr-sm-5"> <button disabled class="btn btn-disabled">Next</button> </div>
                 </div>

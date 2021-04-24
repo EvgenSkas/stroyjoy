@@ -51,33 +51,46 @@ $(document).ready(() => {
   // ----------------------------CALCULATE COST------------------------
 
   let questionPageNumber = 0
-
+  let finishData = {}
   const questionPages = ['.roof-calc-card', 'input[name=radio]', '.skat-calc-card', '.range', '.city']
 
   function getActiveData (page) {
     console.log('page', page)
     if (questionPageNumber === 0 || questionPageNumber === 2) {
       $(page).each(function () {
-        if ($(this).hasClass('active')) console.log('getCardData', $(this).attr('data-type'))
+        if ($(this).hasClass('active')) finishData = { ...finishData, ...{ [questionPageNumber]: $(this).attr('data-type') } }
       })
     } else if (questionPageNumber === 1) {
       $(page).each(function () {
-        if ($(this)[0].checked) console.log('getCardData', $(this).attr('data-type'))
+        if ($(this)[0].checked) finishData = { ...finishData, ...{ [questionPageNumber]: $(this).attr('data-type') } }
       })
     } else if (questionPageNumber === 3 || questionPageNumber === 4) {
       $(page).each(function () {
-        console.log('getCardData', $(this).val())
+        finishData = { ...finishData, ...{ [questionPageNumber]: $(this).val() } }
       })
     }
+  }
+
+  function enablePrevButton () {
+    $('#prev button').removeAttr('disabled').removeClass('btn-disabled').addClass('btn-success')
   }
 
   function enableNextButton () {
     $('#next button').removeAttr('disabled').removeClass('btn-disabled').addClass('btn-success')
   }
 
+  function disablePrevButton () {
+    $('#prev button').attr('disabled', true).addClass('btn-disabled').removeClass('btn-success')
+  }
+
   function disableNextButton () {
-    console.log('next', $('#next button'))
     $('#next button').attr('disabled', true).addClass('btn-disabled').removeClass('btn-success')
+  }
+
+  function updateProgress () {
+    const currentPage = questionPageNumber + 1
+    $('#step').text(`${currentPage} `)
+    $('#progress .progress-bar').css('width', `${17 * currentPage}%`)
   }
 
   $('#next').click((e) => {
@@ -93,10 +106,42 @@ $(document).ready(() => {
     } else {
       questions[0].classList.remove('d-none')
     }
-
     getActiveData(questionPages[questionPageNumber])
+    if (questionPageNumber === 4) {
+      console.log('questionPageNumber', questionPageNumber, $('#price-btns'))
+      $('#price-btns').removeClass('d-flex').addClass('d-none')
+    }
     questionPageNumber += 1
-    disableNextButton()
+    console.log('String(questionPageNumber) in finishData', String(questionPageNumber) in finishData)
+    updateProgress()
+    if (!(String(questionPageNumber) in finishData))disableNextButton()
+    enablePrevButton()
+  })
+
+  $('#prev').click((e) => {
+    e.preventDefault()
+    let visbleElementIndex
+    const questions = $('.question')
+    questions.each(function (i, elem) {
+      if (!$(this).hasClass('d-none')) visbleElementIndex = i
+    })
+    questions[visbleElementIndex].classList.add('d-none')
+    if (visbleElementIndex - 1 < questions.length) {
+      questions[visbleElementIndex - 1].classList.remove('d-none')
+    } else {
+      questions[0].classList.remove('d-none')
+    }
+    getActiveData(questionPages[questionPageNumber])
+    if (questionPageNumber === 4) {
+      console.log('questionPageNumber', questionPageNumber, $('#price-btns'))
+      $('#price-btns').removeClass('d-none').addClass('d-flex')
+    }
+    questionPageNumber -= 1
+    updateProgress()
+    if (questionPageNumber === 0) {
+      disablePrevButton()
+    }
+    enableNextButton()
   })
 
   $('.roof-calc-card').click(function (e) {
@@ -138,14 +183,13 @@ $(document).ready(() => {
       e.preventDefault()
       e.stopPropagation()
     } else {
-      var form_data = $(this).serialize() // Собираем все данные из формы
-      console.log('submit', form_data)
+      var formData = $(this).serialize() // Собираем все данные из формы
+      console.log('formData', formData + $.param(finishData))
       $.ajax({
         type: 'POST', // Метод отправки
-        url: 'php/send.php', // Путь до php файла отправителя
-        data: form_data,
+        url: 'php/send2.php', // Путь до php файла отправителя
+        data: `${formData} + & + ${$.param(finishData)}`,
         success: function () {
-          console.log('!!!!test')
           // Код в этом блоке выполняется при успешной отправке сообщения
           alert('Ваше сообщение отправлено!')
         },
