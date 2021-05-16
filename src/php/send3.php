@@ -2,7 +2,7 @@
     error_reporting(-1);
     ini_set('display_errors', 'On');
     set_error_handler("var_dump");
-    $to = "evgenskas@gmail.com";
+    $to = "kashirina_1984@tut.by";
     $subject = 'Обратный звонок'; //Заголовок сообщения
     $message = '
             <html>

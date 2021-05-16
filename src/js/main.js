@@ -3,24 +3,6 @@ import $ from '../local_modules/jquery/dist/jquery.min'
 import '../local_modules/bootstrap/dist/js/bootstrap.min.js'
 
 $(document).ready(() => {
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  // var forms = document.getElementsByClassName("needs-validation");
-  // // Loop over them and prevent submission
-  // var validation = Array.prototype.filter.call(forms, function (form) {
-  //   form.addEventListener(
-  //     "submit",
-  //     function (event) {
-  //       if (form.checkValidity() === false) {
-  //         event.preventDefault();
-  //         event.stopPropagation();
-  //       }
-  //       form.classList.add("was-validated");
-  //     },
-  //     false
-  //   );
-  // });
-
-  // console.log('validation', validation)
 
   $('#form').submit(function (e) {
     e.preventDefault()
@@ -209,7 +191,6 @@ $(document).ready(() => {
       e.stopPropagation()
     } else {
       var formData = $(this).serialize() // Собираем все данные из формы
-      console.log('formData',finishData, formData + $.param(finishData))
       $.ajax({
         type: 'POST', // Метод отправки
         url: 'php/send3.php', // Путь до php файла отправителя
@@ -225,12 +206,4 @@ $(document).ready(() => {
     }
     form.classList.add('was-validated')
   })
-
-  // (async () => console.log(window.Bootstrap))();
-
-  // var triggerEl = document.querySelector('#myTab a[href="#profile"]');
-  // window.bootstrap.Tab.getInstance(triggerEl).show(); // Select tab by name
-
-  // var triggerFirstTabEl = document.querySelector("#myTab li:first-child a");
-  // window.bootstrap.Tab.getInstance(triggerFirstTabEl).show(); // Select first tab
 })
