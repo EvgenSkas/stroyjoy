@@ -1,11 +1,11 @@
-.modal.fade#calculateModal(tabindex="-1" role="dialog" aria-labelledby="calculateModal" aria-hidden="true")
+.modal.fade#calculateModalSidingSiding(tabindex="-1" role="dialog" aria-labelledby="calculateModalSiding" aria-hidden="true")
     .modal-dialog.modal-dialog-centered(role="document")
         .modal-content
             .modal-header
                 h5.modal-title#exampleModalLongTitle Ответьте на несколько вопросов. 
                     span Шаг 
                         span#step 1 
-                        span из 6.
+                        span из 5.
                 button.close(type="button" data-dismiss="modal" aria-label="Close")
                 span(aria-hidden="true") &times
             .modal-body 
@@ -15,53 +15,41 @@
                 .container
                     .question
                         .h5
-                            b Выбирите покрытие:
+                            b Выберите вид обшивки:
                         .row.justify-content-center.w-100
-                            .col-md-6.card.roof-calc-card(data-type="Металлочерипица")
-                                img.card-img-top(src="img/calc_cherep.jpg" alt="Card image cap")
+                            .col-md-6.card.roof-calc-card(data-type="Карабельный Брус")
+                                img.card-img-top(src="img/carable_brus.jpg" alt="Card image cap")
                                 .card-body
-                                    span Металлочерепица
-                            .col-md-6.card.roof-calc-card(data-type="Профнастил")
-                                img.card-img-top(src="img/calc_prof.jpg" alt="Card image cap")
+                                    span Карабельный брус
+                            .col-md-6.card.roof-calc-card(data-type="Блок-хаус")
+                                img.card-img-top(src="img/block_house_calc.jpg" alt="Card image cap")
                                 .card-body
-                                    span Профнастил
-                            .col-md-6.card.roof-calc-card(data-type="Шифер")
-                                img.card-img-top(src="img/calc_shif.jpg" alt="Card image cap")
+                                    span Блок-хаус
+                            .col-md-6.card.roof-calc-card(data-type="Фасадные панели с иметацией кирпича")
+                                img.card-img-top(src="img/panel_kirpich_calc.jpg" alt="Card image cap")
                                 .card-body
-                                    span Шифер
-                            .col-md-6.card.roof-calc-card(data-type="Ондулин")
-                                img.card-img-top(src="img/calc_ondulin.jpg" alt="Card image cap")
+                                    span Фасадные панели с иметацией кирпича
+                            .col-md-6.card.roof-calc-card(data-type="Фасадные панели с иметацией камня")
+                                img.card-img-top(src="img/panel_stone_calc.jpg" alt="Card image cap")
                                 .card-body
-                                    span Ондулин
+                                    span Фасадные панели с иметацией камня
+                            .col-md-6.card.roof-calc-card(data-type="Тимберблок с иметацией дерева")
+                                img.card-img-top(src="img/timberblock_calc.jpg" alt="Card image cap")
+                                .card-body
+                                    span Тимберблок с иметацией дерева
                     .d-none.question
                         .h5
-                            b У Вас новое строительство или замена кровли?
+                            b Нужно ли утепление?
                         #options 
-                            label.options Новое строительство 
-                               input(type="radio" name="radio" data-type="Новое строительство")
+                            label.options Да, нужно делать утепление
+                               input(type="radio" name="radio" data-type="Да")
                                span.checkmark
-                            label.options Замена кровли
-                                input(type="radio" name="radio" data-type="Замена кровли")
+                            label.options Нет, утепление не нужно
+                                input(type="radio" name="radio" data-type="Нет")
                                 span.checkmark
                     .d-none.question
-                        .h5
-                            b Какая у Вас крыша?
-                        .row.justify-content-center.w-100
-                            .col-md-6.card.skat-calc-card(data-type="Двускатная")
-                                img.card-img-top(src="img/two_skat.jpg" alt="Card image cap")
-                                .card-body
-                                    span Двускатная
-                            .col-md-6.card.skat-calc-card(data-type="Трехскатная")
-                                img.card-img-top(src="img/three_skat.jpg" alt="Card image cap")
-                                .card-body
-                                    span Трехскатная
-                            .col-md-6.card.skat-calc-card(data-type="Многоскатная")
-                                img.card-img-top(src="img/many_skat.jpg" alt="Card image cap")
-                                .card-body
-                                    span Многоскатная
-                    .d-none.question
                         .h5 
-                            b Какая примерно площадь крыши?
+                            b Какая примерно площадь фасада Вам нужна?
                         input.range(min="10" max="500" value="0" step="1" type="range" name="square") 
                         #squareValue
                             span 0 кв.м.
@@ -69,7 +57,7 @@
                         .h5 
                             b Укажите место строительства (для расчета стоимости доставки)
                         input.form-control.city(type="text" name="city" placeholder="Например: Молодечно")
-                    form#form2.d-none.question.needs-validation(novalidate)
+                    form#form3.d-none.question.needs-validation(novalidate)
                         .h5 
                             b Заполните, пожалуйста, форму контактов, чтобы мы знали куда отправлять результаты расчета стоимости!
                         .form-group
@@ -83,7 +71,7 @@
                             input.form-control#validationCustom06(name="phone" type="number" aria-describedby="emailHelp" required placeholder="375XX XXX XX XX")
                         button.btn.btn-primary(type="submit") Отправить
                 #price-btns.d-flex.align-items-center.pt-3
-                    #prev
+                    #prev.siding
                         button.btn.btn-disabled(disabled) Previous
-                    #next.ml-auto.mr-sm-5
+                    #next.ml-auto.mr-sm-5.siding
                         button.btn.btn-disabled(disabled) Next

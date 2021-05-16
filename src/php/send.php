@@ -16,8 +16,8 @@
                 </body>
             </html>'; //Текст сообщения
     $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
-    $headers .= "From: Отправитель заказать обратный звонок\r\n"; //Наименование и почта отправителя
-    $send = mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
+    $headers .= "From: Отправитель <hoster@gmail.com>\r\n"; //Наименование и почта отправителя
+    $send = mail($to, $subject, $message, $headers, '-f evgenskas@gmail.com'); //Отправка письма с помощью функции mail
     if($send) {
         echo "Сообщение отправлено! Скоро мы с вами свяжемся.";
     }

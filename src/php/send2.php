@@ -2,7 +2,7 @@
     error_reporting(-1);
     ini_set('display_errors', 'On');
     set_error_handler("var_dump");
-    $to = "evgenskas@gmail.com";
+    $to = "kashirina_1984@tut.by";
     $subject = 'Обратный звонок'; //Заголовок сообщения
     $message = '
             <html>
@@ -21,9 +21,9 @@
                 </body>
             </html>'; //Текст сообщения
     $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
-    $headers .= "From: Отправитель заказать обратный звонок\r\n"; //Наименование и почта отправителя
-    $send = mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
+    $headers .= "From: Отправитель <hoster@gmail.com>\r\n"; //Наименование и почта отправителя
+    $send = mail($to, $subject, $message, $headers, '-f evgenskas@gmail.com'); //Отправка письма с помощью функции mail
     if($send) {
-        echo "Сообщение отправлено! Скоро мы с вами свяжемся.";
+        echo "Сообщение отправлено! Скоро мы с вами свяжемся.Price";
     }
 ?>

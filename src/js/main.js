@@ -52,12 +52,15 @@ $(document).ready(() => {
 
   let questionPageNumber = 0
   let finishData = {}
-  const questionPages = ['.roof-calc-card', 'input[name=radio]', '.skat-calc-card', '.range', '.city']
+  const roofQuestions = ['.roof-calc-card', 'input[name=radio]', '.skat-calc-card', '.range', '.city']
+  const sidingQuestions = ['.roof-calc-card', 'input[name=radio]', '.range', '.city']
 
   function getActiveData (page) {
-    console.log('page', page)
     if (questionPageNumber === 0 || questionPageNumber === 2) {
       $(page).each(function () {
+        if (questionPageNumber === 2 && $(this).val()) {
+          finishData = { ...finishData, ...{ [questionPageNumber]: $(this).val() } }
+        }
         if ($(this).hasClass('active')) finishData = { ...finishData, ...{ [questionPageNumber]: $(this).attr('data-type') } }
       })
     } else if (questionPageNumber === 1) {
@@ -93,7 +96,7 @@ $(document).ready(() => {
     $('#progress .progress-bar').css('width', `${17 * currentPage}%`)
   }
 
-  $('#next').click((e) => {
+  $('#next').click(function (e) {
     e.preventDefault()
     let visbleElementIndex
     const questions = $('.question')
@@ -106,15 +109,14 @@ $(document).ready(() => {
     } else {
       questions[0].classList.remove('d-none')
     }
-    getActiveData(questionPages[questionPageNumber])
-    if (questionPageNumber === 4) {
-      console.log('questionPageNumber', questionPageNumber, $('#price-btns'))
+    const questionList = $(this).hasClass('siding') ? sidingQuestions : roofQuestions
+    getActiveData(questionList[questionPageNumber])
+    if (questionPageNumber === questionList.length - 1) {
       $('#price-btns').removeClass('d-flex').addClass('d-none')
     }
     questionPageNumber += 1
-    console.log('String(questionPageNumber) in finishData', String(questionPageNumber) in finishData)
     updateProgress()
-    if (!(String(questionPageNumber) in finishData))disableNextButton()
+    if (!(String(questionPageNumber) in finishData)) disableNextButton()
     enablePrevButton()
   })
 
@@ -131,9 +133,8 @@ $(document).ready(() => {
     } else {
       questions[0].classList.remove('d-none')
     }
-    getActiveData(questionPages[questionPageNumber])
+    getActiveData(roofQuestions[questionPageNumber])
     if (questionPageNumber === 4) {
-      console.log('questionPageNumber', questionPageNumber, $('#price-btns'))
       $('#price-btns').removeClass('d-none').addClass('d-flex')
     }
     questionPageNumber -= 1
@@ -184,11 +185,35 @@ $(document).ready(() => {
       e.stopPropagation()
     } else {
       var formData = $(this).serialize() // Собираем все данные из формы
-      console.log('formData', formData + $.param(finishData))
       $.ajax({
         type: 'POST', // Метод отправки
         url: 'php/send2.php', // Путь до php файла отправителя
-        data: `${formData} + & + ${$.param(finishData)}`,
+        data: `${formData}&${$.param(finishData)}`,
+        success: function () {
+          // Код в этом блоке выполняется при успешной отправке сообщения
+          alert('Ваше сообщение отправлено!')
+        },
+        error: function (xhr) {
+          alert('Извинете, что-то пошло не так(')
+        }
+      })
+    }
+    form.classList.add('was-validated')
+  })
+
+  $('#form3').submit(function (e) {
+    e.preventDefault()
+    const form = document.getElementById('form3')
+    if (!form.checkValidity()) {
+      e.preventDefault()
+      e.stopPropagation()
+    } else {
+      var formData = $(this).serialize() // Собираем все данные из формы
+      console.log('formData',finishData, formData + $.param(finishData))
+      $.ajax({
+        type: 'POST', // Метод отправки
+        url: 'php/send3.php', // Путь до php файла отправителя
+        data: `${formData}&${$.param(finishData)}`,
         success: function () {
           // Код в этом блоке выполняется при успешной отправке сообщения
           alert('Ваше сообщение отправлено!')
